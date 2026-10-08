@@ -1,0 +1,15 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "Library Management System - Flask + SQLite backend, vanilla JS frontend, Node.js tooling",
+  "scripts": {
+    "start": "python app.py",
+    "test": "python test_api.py",
+    "format": "prettier --write static/*.js static/*.css templates/*.html",
+    "lint": "eslint static/app.js"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}
