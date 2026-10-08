@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header><h1>📚 Library Management System</h1></header>
+  <div id="toast" class="toast" hidden></div>
+
+  <main>
+    <section class="card">
+      <h2>Add Book</h2>
+      <form id="book-form">
+        <input name="title" placeholder="Title" required>
+        <input name="author" placeholder="Author" required>
+        <input name="isbn" placeholder="ISBN" required>
+        <input name="category" placeholder="Category" required>
+        <button type="submit">Add Book</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Add Member</h2>
+      <form id="member-form">
+        <input name="name" placeholder="Name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="submit">Add Member</button>
+      </form>
+    </section>
+
+    <section class="card wide">
+      <div class="bar">
+        <h2>Books</h2>
+        <div class="search">
+          <input id="search" placeholder="Search by title, author or ISBN">
+          <button id="search-btn">Search</button>
+          <button id="clear-btn" class="secondary">Clear</button>
+        </div>
+      </div>
+      <label>Issue to member:
+        <select id="member-select"><option value="">-- select member --</option></select>
+      </label>
+      <table>
+        <thead><tr><th>ID</th><th>Title</th><th>Author</th><th>ISBN</th><th>Category</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody id="book-body"></tbody>
+      </table>
+      <p id="empty" class="empty" hidden></p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
